@@ -1,0 +1,287 @@
+[
+  {
+    "id": "builtin-wps-news",
+    "name": "WPS 资讯 / 热点弹窗",
+    "vendor": "WPS",
+    "priority": 90,
+    "action": "hide",
+    "enabled": true,
+    "note": "右下角资讯推送窗，非用户主动打开",
+    "match": {
+      "process": ["wps.exe", "wpp.exe", "et.exe"],
+      "title_re": "资讯|热点|推荐|福利|活动|推广|广告|秒懂|热搜",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-wps-promo",
+    "name": "WPS 推广 / 会员促销",
+    "vendor": "WPS",
+    "priority": 88,
+    "action": "hide",
+    "enabled": true,
+    "note": "会员/云服务促销浮窗",
+    "match": {
+      "process": ["wps.exe", "wpp.exe", "et.exe", "wpscloudsvr.exe"],
+      "title_re": "会员|超级会员|限时|优惠|领取|礼包|特权|尊享",
+      "not_foreground": true,
+      "max_area_ratio": 0.7
+    }
+  },
+  {
+    "id": "builtin-wps-update",
+    "name": "WPS 升级提示窗",
+    "vendor": "WPS",
+    "priority": 70,
+    "action": "hide",
+    "enabled": false,
+    "note": "默认关闭：担心影响正常更新时可在规则管理里打开",
+    "match": {
+      "process": ["wpsupdate.exe", "wpscloudsvr.exe", "ksolaunch.exe"],
+      "title_re": "升级|新版本|更新|修复",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-360-browser",
+    "name": "360 浏览器推广窗",
+    "vendor": "360",
+    "priority": 92,
+    "action": "hide",
+    "enabled": true,
+    "note": "浏览器右下角推荐/游戏/导航推广",
+    "match": {
+      "process": ["360se.exe", "360se6.exe", "360chrome.exe", "360seupdate.exe"],
+      "title_re": "推荐|热点|游戏|资讯|福利|活动|推广|广告|导航",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-360-safeguard",
+    "name": "360 安全卫士弹窗",
+    "vendor": "360",
+    "priority": 92,
+    "action": "hide",
+    "enabled": true,
+    "note": "卫士的推广、促销、节日活动弹窗",
+    "match": {
+      "process": ["360tray.exe", "360safe.exe", "360leakfixer.exe", "qhsafetray.exe", "360entclient.exe"],
+      "title_re": "推广|福利|活动|抽奖|限时|优惠|领取|红包|礼包|游戏|资讯|热点|推荐|升级",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-360-antivirus",
+    "name": "360 杀毒促销窗",
+    "vendor": "360",
+    "priority": 90,
+    "action": "hide",
+    "enabled": true,
+    "note": "杀毒模块的会员/促销弹窗",
+    "match": {
+      "process": ["360sd.exe", "360rp.exe", "360rps.exe", "zhuDongFangYu.exe"],
+      "title_re": "会员|特权|优惠|限时|领取|活动|礼包|推广",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-qq-news",
+    "name": "QQ 资讯 / 游戏推广窗",
+    "vendor": "腾讯",
+    "priority": 90,
+    "action": "hide",
+    "enabled": true,
+    "note": "QQ 主程序弹出的迷你资讯/游戏窗",
+    "match": {
+      "process": ["qq.exe", "qqsclauncher.exe", "tim.exe"],
+      "title_re": "资讯|热点|游戏|推荐|福利|活动|推广|广告|直播|看点",
+      "not_foreground": true,
+      "max_area_ratio": 0.6
+    }
+  },
+  {
+    "id": "builtin-qqpcmgr",
+    "name": "腾讯电脑管家推广窗",
+    "vendor": "腾讯",
+    "priority": 90,
+    "action": "hide",
+    "enabled": true,
+    "note": "管家的活动/推荐浮窗",
+    "match": {
+      "process": ["qqpcmgr.exe", "qqpctray.exe", "qqpcrtp.exe", "qqpcmgrupdate.exe"],
+      "title_re": "推荐|福利|活动|限时|优惠|领取|礼包|推广|广告",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-qq-browser",
+    "name": "QQ 浏览器资讯窗",
+    "vendor": "腾讯",
+    "priority": 86,
+    "action": "hide",
+    "enabled": true,
+    "note": "浏览器右下角资讯推送",
+    "match": {
+      "process": ["qqbrowser.exe", "qqbrowserex.exe"],
+      "title_re": "资讯|热点|推荐|游戏|福利|活动|推广",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-sogou-hot",
+    "name": "搜狗输入法热搜 / 皮肤推广",
+    "vendor": "搜狗",
+    "priority": 88,
+    "action": "hide",
+    "enabled": true,
+    "note": "输入法右下角热搜、皮肤、活动窗",
+    "match": {
+      "process": ["sogoucloud.exe", "sgtool.exe", "sogouimebroker.exe", "sogoupinyin.exe"],
+      "title_re": "热搜|热点|资讯|皮肤|表情|福利|活动|推广|推荐|广告",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-thunder-ad",
+    "name": "迅雷广告 / 会员推荐",
+    "vendor": "迅雷",
+    "priority": 90,
+    "action": "hide",
+    "enabled": true,
+    "note": "下载器右下角广告位与会员促销",
+    "match": {
+      "process": ["thunder.exe", "thunderplatform.exe", "xlserviceplatform.exe", "thundervip.exe"],
+      "title_re": "广告|推广|会员|福利|活动|推荐|游戏|限时|优惠|领取|资讯",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-thunder-game",
+    "name": "迅雷游戏中心弹窗",
+    "vendor": "迅雷",
+    "priority": 86,
+    "action": "hide",
+    "enabled": true,
+    "note": "游戏/直播推广",
+    "match": {
+      "process": ["thunder.exe", "xlbrowser.exe", "downloadsdkserver.exe"],
+      "title_re": "游戏|直播|开服|礼包|注册就送",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-kingsoft-duba",
+    "name": "金山毒霸推广弹窗",
+    "vendor": "金山",
+    "priority": 88,
+    "action": "hide",
+    "enabled": true,
+    "note": "毒霸的活动/会员/促销窗",
+    "match": {
+      "process": ["kxetray.exe", "kxescore.exe", "kxemain.exe", "kwsprotect64.exe"],
+      "title_re": "福利|活动|限时|优惠|会员|领取|推广|推荐|抽奖|红包",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-driver-genius",
+    "name": "驱动精灵推广窗",
+    "vendor": "驱动精灵",
+    "priority": 86,
+    "action": "hide",
+    "enabled": true,
+    "note": "装机推广、软件推荐、会员弹窗",
+    "match": {
+      "process": ["drvinst.exe", "drivergenius.exe", "dtupdate.exe"],
+      "title_re": "推荐|推广|安装|福利|活动|会员|限时|优惠|礼包",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-drive-the-life",
+    "name": "驱动人生推广窗",
+    "vendor": "驱动人生",
+    "priority": 86,
+    "action": "hide",
+    "enabled": true,
+    "note": "推广与活动弹窗",
+    "match": {
+      "process": ["drivethelife.exe", "dtlite.exe", "drivethelife.exe"],
+      "title_re": "推荐|推广|福利|活动|会员|限时|优惠|礼包",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-ludashi",
+    "name": "鲁大师广告弹窗",
+    "vendor": "鲁大师",
+    "priority": 86,
+    "action": "hide",
+    "enabled": true,
+    "note": "硬件检测工具的广告与游戏推广",
+    "match": {
+      "process": ["ludashi.exe", "ldsgamebox.exe", "ldsvip.exe"],
+      "title_re": "广告|推广|游戏|福利|活动|推荐|限时|优惠|礼包",
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-winrar-reminder",
+    "name": "WinRAR 试用提醒窗",
+    "vendor": "WinRAR",
+    "priority": 84,
+    "action": "close",
+    "enabled": true,
+    "note": "免费版压缩后的购买提醒",
+    "match": {
+      "process": ["winrar.exe"],
+      "class_re": ["RarReminder"],
+      "not_foreground": true
+    }
+  },
+  {
+    "id": "builtin-generic-ad-toolwindow",
+    "name": "通用：广告词 + 隐藏窗口特征",
+    "vendor": "通用",
+    "priority": 40,
+    "action": "hide",
+    "enabled": true,
+    "note": "不在任务栏显示、非前台、面积小，且标题含广告词 —— 四个条件同时满足才动手",
+    "match": {
+      "exstyle_has": ["WS_EX_TOOLWINDOW"],
+      "exstyle_lacks": ["WS_EX_APPWINDOW"],
+      "not_foreground": true,
+      "max_area_ratio": 0.45,
+      "title_re": "广告|推广|赞助|福利|抽奖|限时|优惠|领取|红包|礼包|活动中心|游戏中心|推荐阅读|猜你喜欢"
+    }
+  },
+  {
+    "id": "builtin-generic-ad-ownerless",
+    "name": "通用：无主窗 + 广告词",
+    "vendor": "通用",
+    "priority": 35,
+    "action": "hide",
+    "enabled": true,
+    "note": "无 owner 的独立小窗 + 广告词",
+    "match": {
+      "no_owner": true,
+      "not_foreground": true,
+      "max_area_ratio": 0.4,
+      "title_re": "广告|推广|赞助|福利|抽奖|限时|优惠|领取|红包|礼包|推荐阅读|猜你喜欢|今日推荐"
+    }
+  },
+  {
+    "id": "builtin-generic-popup-dialog",
+    "name": "通用：推广类对话框",
+    "vendor": "通用",
+    "priority": 30,
+    "action": "click_close",
+    "enabled": false,
+    "note": "默认关闭：对话框类窗口容易误伤，确认后再开",
+    "match": {
+      "class_re": ["^#32770$"],
+      "not_foreground": true,
+      "title_re": "活动|福利|限时|优惠|领取|礼包|推广|广告|推荐"
+    }
+  }
+]
